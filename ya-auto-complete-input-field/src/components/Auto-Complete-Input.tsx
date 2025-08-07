@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, type FC } from 'react';
-import 'Auto-complete-Input.css'; // スタイルは別途作成します
+import './Auto-Complete-Input.css'; // スタイルシートのインポート
 
 interface AutocompleteInputProps {
   options: string[]; // ドロップダウンの選択肢
