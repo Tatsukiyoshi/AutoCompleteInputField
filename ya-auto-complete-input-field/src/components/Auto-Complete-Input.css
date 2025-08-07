@@ -1,0 +1,62 @@
+.autocomplete-wrapper {
+  position: relative;
+  width: 300px; /* 必要に応じて調整 */
+}
+
+.autocomplete-wrapper input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* paddingとborderをwidthに含める */
+  font-size: 16px;
+}
+
+.autocomplete-wrapper input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.autocomplete-options {
+  position: absolute;
+  top: 100%; /* インプットの下に表示 */
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  background-color: #3eb850;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px; /* 表示されるリストの最大高さ */
+  overflow-y: auto; /* 高さを超えたらスクロール */
+  z-index: 100; /* 他の要素の上に表示されるように */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.autocomplete-options li {
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.autocomplete-options li:hover,
+.autocomplete-options li.selected { /* 選択中のスタイルも追加可能 */
+  background: #3eb850;
+}
+
+/* スクロールバーのスタイル（任意） */
+.autocomplete-options::-webkit-scrollbar {
+  width: 8px;
+}
+
+.autocomplete-options::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.autocomplete-options::-webkit-scrollbar-track {
+  background-color: #f7f7f7;
+}
